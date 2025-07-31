@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,7 @@ export default function Home() {
         />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
+            Adhithyan.t{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
               src/pages/index.js
             </code>
@@ -61,6 +62,12 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <Link
+            className="rounded-full border border-solid border-blue-500 transition-colors flex items-center justify-center hover:bg-blue-100 dark:hover:bg-blue-900 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px] text-blue-600 dark:text-blue-400"
+            href="/todo"
+          >
+            Go to Todo App
+          </Link>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
