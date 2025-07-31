@@ -37,7 +37,6 @@ const Todo = () => {
           {showForm ? "Cancel" : "Add Task"}
         </button>
       </div>
-      
       <div className="flex flex-wrap gap-6 justify-center">
         {showForm && <TaskForm setShowForm={setShowForm} />}
         {upcomingTasks.map((task) => (
