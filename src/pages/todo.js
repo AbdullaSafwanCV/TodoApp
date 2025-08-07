@@ -7,7 +7,7 @@ const Todo = () => {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/todos/") // Adjust URL
+    fetch("https://todolist-backend-w1jq.onrender.com/api/todos/") // Adjust URL
       .then((res) => res.json())
       .then((data) => {
         const active = data.results.filter((task) => !task.completed);
@@ -17,7 +17,7 @@ const Todo = () => {
       });
   }, []);
   const toggleCompletion = (task) => {
-    fetch(`http://localhost:8000/api/todos/${task.id}/`, {
+    fetch(`https://todolist-backend-w1jq.onrender.com/api/todos/${task.id}/`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
