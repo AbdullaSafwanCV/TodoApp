@@ -22,7 +22,7 @@ const TodoDetail = () => {
   };
 
   const editTask = () => {
-    router.push(`/todo/edit/${task.id}`);
+    router.push(`/index/edit/${task.id}`);
   };
 
   if (!task) {
@@ -37,7 +37,7 @@ const TodoDetail = () => {
     <div className="max-w-xl mx-auto mt-10 bg-red-700 rounded-xl shadow-lg p-8 relative">
       <Link
         className="absolute top-4 right-4 px-3 py-1 rounded bg-red-700 text-white font-medium hover:bg-red-400"
-        href={`/todo/`}
+        href={`/index/`}
       >
         X
       </Link>
