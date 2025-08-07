@@ -28,7 +28,7 @@ const Todo = () => {
 
   return (
     <>
-      <h1 className="text-3xl font-bold mb-6 ml-78">Upcoming Task's</h1>
+      <h1 className="text-3xl font-bold mb-6 ml-78">Upcoming Task&apos;s</h1>
       <div className="flex justify-center mb-4">
         <button
           onClick={() => setShowForm(!showForm)}
