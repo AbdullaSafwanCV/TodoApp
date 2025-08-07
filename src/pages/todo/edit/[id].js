@@ -9,13 +9,12 @@ const EditTodo = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`https://todolist-backend-w1jq.onrender.com/api/todos//${id}/`)
+      fetch(`https://todolist-backend-w1jq.onrender.com/api/todos/${id}/`)
         .then((res) => res.json())
         .then((data) => setTask(data));
     }
   }, [id]);
 
-  // handle form update and submission here
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-black ">
@@ -25,13 +24,13 @@ const EditTodo = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              fetch(`https://todolist-backend-w1jq.onrender.com/api/todos//${task.id}/`, {
+              fetch(`https://todolist-backend-w1jq.onrender.com/api/todos/${task.id}/`, {
                 method: "PUT",
                 headers: {
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify(task),
-              }).then(() => router.push("/todo"));
+              }).then(() => router.push("/"));
             }}
             className="space-y-4"
           >
@@ -88,6 +87,7 @@ const EditTodo = () => {
             >
               Update Task
             </button>
+            
           </form>
         )}
       </div>

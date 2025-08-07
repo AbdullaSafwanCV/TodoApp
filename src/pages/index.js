@@ -132,7 +132,7 @@ const Todo = () => {
                     : "bg-gray-300 text-gray-800 hover:bg-gray-400"
                 }`}
               >
-                {task.isCompleted ? "Not Completed" : "Completed"}
+               {task.isCompleted ? "Completed" : "Not Completed"}
               </button>
               <Link
                 className="text-center flex-1 px-3 py-1 rounded bg-blue-400 text-white font-medium hover:bg-blue-500"
