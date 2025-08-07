@@ -9,7 +9,7 @@ const EditTodo = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:8000/api/todos/${id}/`)
+      fetch(`https://todolist-backend-w1jq.onrender.com/api/todos/${id}/`)
         .then((res) => res.json())
         .then((data) => setTask(data));
     }
@@ -25,7 +25,7 @@ const EditTodo = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              fetch(`http://localhost:8000/api/todos/${task.id}/`, {
+              fetch(`https://todolist-backend-w1jq.onrender.com/api/todos/${task.id}/`, {
                 method: "PUT",
                 headers: {
                   "Content-Type": "application/json",
