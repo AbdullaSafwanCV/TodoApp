@@ -31,7 +31,7 @@ const EditTodo = () => {
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify(task),
-              }).then(() => router.push("/todo"));
+              }).then(() => router.push("/index"));
             }}
             className="space-y-4"
           >

@@ -18,7 +18,7 @@ const TodoDetail = () => {
   const deleteTask = () => {
     fetch(`https://todolist-backend-w1jq.onrender.com/api/todos/${task.id}/`, {
       method: "DELETE",
-    }).then(() => router.push("/todo"));
+    }).then(() => router.push("/index"));
   };
 
   const editTask = () => {
