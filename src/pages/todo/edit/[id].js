@@ -9,7 +9,7 @@ const EditTodo = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`https://todolist-backend-w1jq.onrender.com/api/todos/${id}/`)
+      fetch(`https://todolist-backend-w1jq.onrender.com/api/todos//${id}/`)
         .then((res) => res.json())
         .then((data) => setTask(data));
     }
@@ -25,13 +25,13 @@ const EditTodo = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              fetch(`https://todolist-backend-w1jq.onrender.com/api/todos/${task.id}/`, {
+              fetch(`https://todolist-backend-w1jq.onrender.com/api/todos//${task.id}/`, {
                 method: "PUT",
                 headers: {
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify(task),
-              }).then(() => router.push("/index"));
+              }).then(() => router.push("/todo"));
             }}
             className="space-y-4"
           >

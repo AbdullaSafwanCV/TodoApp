@@ -83,7 +83,7 @@ const Todo = () => {
 
               <Link
                 className="flex-1 px-3 py-1 rounded bg-blue-400 text-white font-medium hover:bg-blue-500"
-                href={`/index/${task.id}`}
+                href={`/todo/${task.id}`}
               >
                 View
               </Link>
@@ -136,7 +136,7 @@ const Todo = () => {
               </button>
               <Link
                 className="text-center flex-1 px-3 py-1 rounded bg-blue-400 text-white font-medium hover:bg-blue-500"
-                href={`/index/${task.id}`}
+                href={`/todo/${task.id}`}
               >
                 View
               </Link>
